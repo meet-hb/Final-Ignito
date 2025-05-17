@@ -550,6 +550,9 @@ ol ul {
     font-size: 28px;
     line-height: 36px;
   }
+  .Contact-img{
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 479px) {
