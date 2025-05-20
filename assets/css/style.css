@@ -28116,7 +28116,7 @@ edit .quantity-edit button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #7763E5;
+  background: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -28140,12 +28140,12 @@ edit .quantity-edit button {
 .rts-lession-content-wrapper .rts-lession-right .lesson-top-bar .right a {
   height: 30px;
   width: 30px;
-  background: #7763E5;
+  background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #be2126;
   font-size: 16px;
 }
 
