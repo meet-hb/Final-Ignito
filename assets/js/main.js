@@ -254,9 +254,7 @@
                 newVal = 1;
               }
             }
-            $parent
-              .find("a.add-to-cart")
-              .attr("data-quantity", newVal);
+            $parent.find("a.add-to-cart").attr("data-quantity", newVal);
             $parent.find(".input").val(newVal);
           });
         });
@@ -282,18 +280,14 @@
             label = option.text();
 
           if (option.is(":first-child")) {
-            $(
-              '<a href="#" class="drop">' + label + "</a>"
-            ).insertBefore(parent.find("ul"));
+            $('<a href="#" class="drop">' + label + "</a>").insertBefore(
+              parent.find("ul")
+            );
           } else {
             parent
               .find("ul")
               .append(
-                '<li><a href="#" id="' +
-                value +
-                '">' +
-                label +
-                "</a></li>"
+                '<li><a href="#" id="' + value + '">' + label + "</a></li>"
               );
           }
         });
@@ -322,18 +316,14 @@
       $(document).ready(function () {
         "use strict";
 
-        var progressPath = document.querySelector(
-          ".progress-wrap path"
-        );
+        var progressPath = document.querySelector(".progress-wrap path");
         var pathLength = progressPath.getTotalLength();
-        progressPath.style.transition =
-          progressPath.style.WebkitTransition = "none";
-        progressPath.style.strokeDasharray =
-          pathLength + " " + pathLength;
+        progressPath.style.transition = progressPath.style.WebkitTransition =
+          "none";
+        progressPath.style.strokeDasharray = pathLength + " " + pathLength;
         progressPath.style.strokeDashoffset = pathLength;
         progressPath.getBoundingClientRect();
-        progressPath.style.transition =
-          progressPath.style.WebkitTransition =
+        progressPath.style.transition = progressPath.style.WebkitTransition =
           "stroke-dashoffset 10ms linear";
         var updateProgress = function () {
           var scroll = $(window).scrollTop();
@@ -377,31 +367,26 @@
           var filterFns = {
             // show if name ends with -ium
             ium: function (itemElem) {
-              var name =
-                itemElem.querySelector(".name").textContent;
+              var name = itemElem.querySelector(".name").textContent;
               return name.match(/ium$/);
             },
           };
 
           // bind filter button click
-          var filtersElem = document.querySelector(
-            ".filters-button-group"
-          );
+          var filtersElem = document.querySelector(".filters-button-group");
           filtersElem.addEventListener("click", function (event) {
             // only work with buttons
             if (!matchesSelector(event.target, "button")) {
               return;
             }
-            var filterValue =
-              event.target.getAttribute("data-filter");
+            var filterValue = event.target.getAttribute("data-filter");
             // use matching filter function
             filterValue = filterFns[filterValue] || filterValue;
             iso.arrange({ filter: filterValue });
           });
 
           // change is-checked class on buttons
-          var buttonGroups =
-            document.querySelectorAll(".button-group");
+          var buttonGroups = document.querySelectorAll(".button-group");
           for (var i = 0, len = buttonGroups.length; i < len; i++) {
             var buttonGroup = buttonGroups[i];
             radioButtonGroup(buttonGroup);
@@ -423,16 +408,12 @@
         if ($(".grid-masonary").length) {
           // image loaded portfolio init
           $(".grid-masonary").imagesLoaded(function () {
-            $(".portfolio-filter").on(
-              "click",
-              "button",
-              function () {
-                var filterValue = $(this).attr("data-filter");
-                $grid.isotope({
-                  filter: filterValue,
-                });
-              }
-            );
+            $(".portfolio-filter").on("click", "button", function () {
+              var filterValue = $(this).attr("data-filter");
+              $grid.isotope({
+                filter: filterValue,
+              });
+            });
             var $grid = $(".grid-masonary").isotope({
               itemSelector: ".grid-item-p",
               percentPosition: true,
@@ -524,16 +505,14 @@
           max: 500,
           values: [100, 300],
           slide: function (event, ui) {
-            $("#amount").val(
-              "$" + ui.values[0] + " - $" + ui.values[1]
-            );
+            $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
           },
         });
         $("#amount").val(
           "$" +
-          $("#slider-range").slider("values", 0) +
-          " - $" +
-          $("#slider-range").slider("values", 1)
+            $("#slider-range").slider("values", 0) +
+            " - $" +
+            $("#slider-range").slider("values", 1)
         );
       }
     },
@@ -583,9 +562,7 @@
 
         var days = Math.floor(timeLeft / 86400);
         var hours = Math.floor((timeLeft - days * 86400) / 3600);
-        var minutes = Math.floor(
-          (timeLeft - days * 86400 - hours * 3600) / 60
-        );
+        var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
         var seconds = Math.floor(
           timeLeft - days * 86400 - hours * 3600 - minutes * 60
         );
@@ -725,9 +702,7 @@
           // if this element cannot fit in the current row
           // need to add extra pixel to avoid layout dropping in some edge
           // bootstrap grid in firefox
-          var containerWidth = Math.ceil(
-            this.isotope.size.innerWidth + 1
-          );
+          var containerWidth = Math.ceil(this.isotope.size.innerWidth + 1);
           if (this.x !== 0 && itemWidth + this.x > containerWidth) {
             this.x = 0;
             this.y = this.maxY;
@@ -741,10 +716,7 @@
             x: this.x,
             y: this.y,
           };
-          this.maxY = Math.max(
-            this.maxY,
-            this.y + item.size.outerHeight
-          );
+          this.maxY = Math.max(this.maxY, this.y + item.size.outerHeight);
           this.x += itemWidth;
 
           // Compare Y from this row and previous row
@@ -779,9 +751,7 @@
                 this.isotope.items[i].size.marginBottom;
               height -= this.gutter.height || 0;
 
-              if (
-                this.isotope.items[i].size.isBorderBox == false
-              ) {
+              if (this.isotope.items[i].size.isBorderBox == false) {
                 height -=
                   this.isotope.items[i].size.paddingTop +
                   this.isotope.items[i].size.paddingBottom;
@@ -892,11 +862,11 @@ jQuery(document).ready(function () {
     movePoint = myPathC.getPointAtLength(length);
     triangleGroup.transform(
       "t" +
-      parseInt(movePoint.x - 15) +
-      "," +
-      parseInt(movePoint.y - 15) +
-      "r" +
-      (movePoint.alpha - 90)
+        parseInt(movePoint.x - 15) +
+        "," +
+        parseInt(movePoint.y - 15) +
+        "r" +
+        (movePoint.alpha - 90)
     );
   }
 
@@ -927,16 +897,16 @@ jQuery(document).ready(function () {
 
           triangleGroup.transform(
             "t" +
-            parseInt(movePoint.x - 15) +
-            "," +
-            parseInt(movePoint.y - 15) +
-            "r" +
-            (movePoint.alpha - 90)
+              parseInt(movePoint.x - 15) +
+              "," +
+              parseInt(movePoint.y - 15) +
+              "r" +
+              (movePoint.alpha - 90)
           );
         },
         2500,
         mina.easeinout,
-        function () { }
+        function () {}
       );
     });
   }
@@ -1024,9 +994,7 @@ function sendNewMessage() {
 
   var messagesContainer = $(".messages");
 
-  messagesContainer.append(
-    ['<li class="self">', newMessage, "</li>"].join("")
-  );
+  messagesContainer.append(['<li class="self">', newMessage, "</li>"].join(""));
 
   // clean out old message
   userInput.html("");
