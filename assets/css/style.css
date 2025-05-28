@@ -28408,19 +28408,15 @@ edit .quantity-edit button {
   box-shadow: none;
   justify-content: space-between;
 }
-
 .course-content-wrapper-main .accordion .accordion-header button[aria-expanded=true] {
   border-bottom: 1px solid #404041;
 }
-
 .course-content-wrapper-main .accordion .accordion-header button:focus {
   box-shadow: none;
 }
-
 .course-content-wrapper-main .accordion .accordion-header button::after {
   display: none;
 }
-
 .course-content-wrapper-main .accordion .accordion-header button span {
   display: block;
   color: #110C2D;
@@ -28429,7 +28425,6 @@ edit .quantity-edit button {
   font-weight: 500;
   line-height: 26px;
 }
-
 .single-instructor-area-details {
   padding: 40px;
   border-radius: 6px;
@@ -28439,7 +28434,6 @@ edit .quantity-edit button {
   gap: 30px;
   margin-bottom: 30px;
 }
-
 @media only screen and (max-width: 767px) {
   .single-instructor-area-details {
     flex-direction: column;
@@ -28447,38 +28441,31 @@ edit .quantity-edit button {
     padding: 20px;
   }
 }
-
 .single-instructor-area-details:hover .thumbnail img {
   transform: scale(1.15);
 }
-
 .single-instructor-area-details .thumbnail {
   display: block;
   min-width: max-content;
   overflow: hidden;
   border-radius: 4px;
 }
-
 @media only screen and (max-width: 767px) {
   .single-instructor-area-details .thumbnail {
     min-width: 100%;
   }
 }
-
 .single-instructor-area-details .thumbnail img {
   transition: 0.3s;
 }
-
 @media only screen and (max-width: 767px) {
   .single-instructor-area-details .thumbnail img {
     width: 100%;
   }
 }
-
 .single-instructor-area-details .inner-instrustor-area .title {
   margin-bottom: 5px;
 }
-
 .single-instructor-area-details .inner-instrustor-area .deg {
   color: #737477;
   font-size: 16px;
@@ -28486,14 +28473,12 @@ edit .quantity-edit button {
   font-weight: 400;
   line-height: 26px;
 }
-
 .single-instructor-area-details .inner-instrustor-area .stars-area-wrapper {
   display: flex;
   align-items: center;
   gap: 30px;
   margin: 12px 0;
 }
-
 @media only screen and (max-width: 575px) {
   .single-instructor-area-details .inner-instrustor-area .stars-area-wrapper {
     flex-direction: column;
@@ -28501,14 +28486,12 @@ edit .quantity-edit button {
     gap: 15px;
   }
 }
-
 .single-instructor-area-details .inner-instrustor-area .stars-area-wrapper .stars-area span {
   color: #110C2D;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
 }
-
 .single-instructor-area-details .inner-instrustor-area .stars-area-wrapper .stars-area i {
   color: #FFA41C;
 }
