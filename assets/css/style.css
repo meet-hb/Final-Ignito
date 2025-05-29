@@ -27958,7 +27958,7 @@ edit .quantity-edit button {
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -27976,8 +27976,8 @@ edit .quantity-edit button {
 }
 
 .rts-lession-content-wrapper .rts-lession-left {
-  background: #F9F8FF;
-  width: 455px;
+  /* background: #F9F8FF; */
+  /* width: 755px; */
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
