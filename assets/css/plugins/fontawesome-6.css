@@ -3270,7 +3270,7 @@
     content: "\f078"
 }
 
-.fa-chevron-left:before {
+.fa-chevron-right:before {
    content: "\f053";
     color: #be2126;
     font-weight: bold;

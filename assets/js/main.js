@@ -486,7 +486,7 @@
     },
 
     rtslessonToggle: function () {
-      $("#toggle-left-back").on("click", function () {
+      $("#toggle-right-back").on("click", function () {
         $(this).toggleClass("sidebar-hide");
         $(".rts-lession-left").toggleClass("sibebar-none");
       });
