@@ -948,7 +948,6 @@ function openElement() {
   element.find("#sendMessage").click(sendNewMessage);
   messages.scrollTop(messages.prop("scrollHeight"));
 }
-
 function closeElement() {
   element.find(".chat").removeClass("enter").hide();
   element.find(">i").show();
@@ -965,7 +964,6 @@ function closeElement() {
     element.click(openElement);
   }, 500);
 }
-
 function createUUID() {
   // http://www.ietf.org/rfc/rfc4122.txt
   var s = [];
@@ -980,7 +978,6 @@ function createUUID() {
   var uuid = s.join("");
   return uuid;
 }
-
 function sendNewMessage() {
   var userInput = $(".text-box");
   var newMessage = userInput
