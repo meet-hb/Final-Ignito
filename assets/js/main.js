@@ -485,12 +485,12 @@
       }
     },
 
-    rtslessonToggle: function () {
-      $("#toggle-right-back").on("click", function () {
-        $(this).toggleClass("sidebar-hide");
-        $(".rts-lession-left").toggleClass("sibebar-none");
-      });
-    },
+   rtslessonToggle: function () {
+    $("#toggle-right-back").on("click", function () {
+      $(this).toggleClass("sidebar-hide");
+      $(".rts-lesson-left").toggleClass("sidebar-none");
+    });
+  },
 
     filterClickButton: function () {
       $(".discover-filter-activation").on("click", function () {
