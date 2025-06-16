@@ -445,7 +445,6 @@
       });
     },
     // sticky header activation
-
     stickyHeader: function (e) {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
@@ -455,7 +454,6 @@
         }
       });
     },
-
     progressAvtivation: function () {
       $(window).scroll(function () {
         if ($(this).scrollTop() > 250) {
@@ -472,11 +470,9 @@
         }
       });
     },
-
     wowActive: function () {
       new WOW().init();
     },
-
     stickySidebar: function () {
       if (typeof $.fn.theiaStickySidebar !== "undefined") {
         $(".rts-sticky-column-item").theiaStickySidebar({
@@ -484,14 +480,12 @@
         });
       }
     },
-
     rtslessonToggle: function () {
       $("#toggle-right-back").on("click", function () {
         $(this).toggleClass("sidebar-hide");
         $(".rts-lesson-left").toggleClass("sidebar-none");
       });
     },
-
     filterClickButton: function () {
       $(".discover-filter-activation").on("click", function () {
         $(this).toggleClass("open");
